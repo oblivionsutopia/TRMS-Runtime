@@ -1,0 +1,25 @@
+				DataBase Blueprint
+
+Status Codes
+0-submitted
+1-recieved/in review (DS)
+2-approved by DS
+3-approved by DH
+4-approved by BenCo
+5-Reimbursement sent
+6-Rejected
+
+Procedures
+TRANS_VIEW - VIEW ALL SENT TRANSACTIONS
+FORMS_VIEW - VIEW ALL SUBMITTED FORMS BY USER
+TRANS_VIEW_BC - VIEW ALL TRANS BY COMPANY
+FORMS_VIEW_DS - VIEW ALL FORMS WITH STATUS CODE 1
+FORMS_VIEW_DH - VIEW ALL FORMS WITH STATUS CODE 2
+FORMS_VIEW_BC - VIEW ALL FORMS WITH STATUS CODE 1,2,3 
+
+Sequences
+EMPLOYEEID CREATOR
+TRANSACTIONID CREATOR
+
+Triggers
+TRANS_POST- Automatic post a transaction after reimbursement status reaches 5
