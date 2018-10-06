@@ -8,7 +8,7 @@
     <title>Reimbursement Request</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reimbursement.css">
 </head>
 
 <body>
@@ -31,17 +31,15 @@
                 </li>
             </ul>
         </div>
-
     </nav>
-    <h1>Reimbursement Request Form</h1>
     <!--make it bold-->
-    <form action="" class="main-form needs-validation" novalidate>
+    <form action="" class="container-fluid Cityscape">
+        <h1>Reimbursement Request Form</h1>
         <div class="row">
             <div class="col">
                 <div class="form-group">
                     <label for="firstname">Firstname</label>
-                    <input type="text" name="firstname" id="firstname" class="form-control is-invalid">
-                    <div class="invalid-feedback">Enter your first name</div>
+                    <input type="text" name="firstname" id="firstname" class="form-control">
                 </div>
             </div>
             <div class="col">
@@ -62,14 +60,6 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="Postion">Postion</label>
-                    <input type="text" name="Postion" id="Postion" class="form-control">
-                </div>
-            </div>
-        </div>
         <h2>Training Information</h2>
         <!-- does the date need to be a range or is just one ok? -->
         <div class="form-group">
@@ -81,7 +71,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="StartTime">Start Time</label>
-                    <input type="time" name="StartTime" id="StartTime" class="form-control is-invalid">
+                    <input type="time" name="StartTime" id="StartTime" class="form-control">
                 </div>
             </div>
             <div class="col">
@@ -103,13 +93,6 @@
             <label for="Cost">Cost</label>
             <input type="text" name="Cost" id="Cost" class="form-control">
         </div>
-        <div class="form-group">
-            <label for="gender">Gender</label>
-            <select name="gender" id="gender" class="form-control">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-        </div>
         <!-- types of grading formats -->
         <div class="form-group">
             <label for="GradingFormats">Grading Formats</label>
@@ -130,11 +113,11 @@
         </div>
         <div class="form-group">
             <h6>Description</h6>
-            <textarea id="Description" rows="3" cols="80">Your Text Here</textarea>
+            <textarea id="Description" rows="3" cols="80" class="form-control">Your Text Here</textarea>
         </div>
         <div class="form-group">
             <h6>Work Related Justifications</h6>
-            <textarea id="Description" rows="3" cols="80">Your Text Here</textarea>
+            <textarea id="Description" rows="3" cols="80" class="form-control">Your Text Here</textarea>
         </div>
         <div class="form-group">
             <label for="MinimumPassingGrade">Minimum Passing Grade</label>
@@ -149,9 +132,9 @@
             <input name="MissedWorkTime" id="MissedWorkTime" class="form-control">
         </div>
         <div class="form-group">
-                <label for="ProjectedReimbursement">Projected Reimbursement</label>
-                <input name="ProjectedReimbursement" id="ProjectedReimbursement" class="form-control" readonly>
-            </div>
+            <label for="ProjectedReimbursement">Projected Reimbursement</label>
+            <input name="ProjectedReimbursement" id="ProjectedReimbursement" class="form-control" readonly>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 

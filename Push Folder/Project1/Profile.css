@@ -1,11 +1,18 @@
-.main-form {
-    width: 450px;
-    margin: auto;
+/* body{
+ /* background: -webkit-linear-gradient(left, #7231af, #00c6ff);  
+    background: rgb(247, 241, 231);
+}  
+/* h1{
+    font-weight: bold;
 }
+nav{
+    font-weight: bold;
+} */
 body,html{
     height: 100%;
     color: rgb(255, 255, 255);
 }
+
 form.Cityscape{
     background: url('images/Cityscape.jpg') no-repeat; 
     background-size: cover;

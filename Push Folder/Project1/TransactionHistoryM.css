@@ -1,6 +1,5 @@
-.main-form {
-    width: 450px;
-    margin: auto;
+.btn{
+    float: right;
 }
 body,html{
     height: 100%;
