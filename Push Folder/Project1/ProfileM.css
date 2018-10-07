@@ -1,7 +1,3 @@
-.main-form {
-    width: 450px;
-    margin: auto;
-}
 .btn{
     float: right;
     background-color:green;
@@ -12,8 +8,7 @@ body,html{
     background-color: rgb(5, 5, 83);
 }
 form.Cityscape2{
-    background: url('images/Cityscape2.jpg');
-    background-repeat: repeat; 
+    background: url('images/Cityscape2.jpg') no-repeat; 
     background-size: cover;
     width: 100%; 
     height: 100%;
