@@ -26,7 +26,10 @@ function setValues(user) {
 	document.getElementsByName('Add')[0].placeholder= user.address;
 	document.getElementsByName('Eml')[0].placeholder= user.email;
 	document.getElementsByName('Ph')[0].placeholder= user.phoneNum;
-	sessionStorage.setItem("EID","userId");
+	//sessionStorage.setItem("EID", user.userName);
+    // Retrieve
+    
+	//sessionStorage.setItem("EID","userId");
 	/*document.getElementById("Us").innerHTML = "The username is: "
 			+ user.userName;
 	document.getElementById("Pas").innerHTML = "The password is: "

@@ -1,11 +1,16 @@
 package com.runtime.controller;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Iterator;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,7 +23,14 @@ public class TransactionController {
 
 	public static String TransJSON(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("in TransJSON method");
-		Transaction trans = (Transaction) request.getSession().getAttribute("Transaction");
+		User user = new User();
+		HttpSession session = request.getSession(true);
+		User user1 = (User)session.getAttribute("User");
+		int user2 = user1.getUserId();
+		System.out.println(user2);
+		TransactionDaoImpl transactionDaoImpl = new TransactionDaoImpl();
+		Transaction trans = transactionDaoImpl.getTransList(user2);
+		//Transaction trans = (Transaction) request.getSession().getAttribute("Trans");
 		System.out.println(trans);
 		try {
 			response.getWriter().write(new ObjectMapper().writeValueAsString(trans));
@@ -31,33 +43,39 @@ public class TransactionController {
 	
 	}
 
-	public static String getTrans(HttpServletRequest request) {
-		if (request.getMethod().equals("POST")) {
-			return "/html/TransactionHistoryE.html";
-		}
+//	public static String getTrans(HttpServletRequest request) {
+//		if (request.getMethod().equals("POST")) {
+//			return "/html/TransactionHistoryE.html";
+//		}
 		
 //		String name = request.getParameter("name");
 //		String type = request.getParameter("type");
-		User user = new User();
-		int userId = Integer.parseInt(request.getParameter("EID"));
-		System.out.println(userId);
-		 request.getSession().setAttribute("User", user);
-		 user.setUserId(userId);
-		 
-		System.out.println("userId");
-		Transaction trans = new Transaction();
-		
-		TransactionDaoImpl transactionDaoImpl = new TransactionDaoImpl();
-		
-		 
-		try {
-			System.out.println("getTrans");
-			transactionDaoImpl.getTransList(userId);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return "/html/TransactionHistoryE.html";
-	}
+//		User user = new User();
+//		user = request.getSession().getAttribute("User");
+//		System.out.println(user);
+//		System.out.println("User Above");
+//		HttpSession session = request.getSession(true);
+//		User user1 = (User)session.getAttribute("User");
+//		int user2 = user1.getUserId();
+//		System.out.println(user2);
+//		TransactionDaoImpl transactionDaoImpl = new TransactionDaoImpl();
+//		Transaction trans = (Transaction)transactionDaoImpl.getTransList(user2);
+//		try {
+//			trans = transactionDaoImpl.getTransList(user2);
+//
+//
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+//		if (trans != null) {
+//
+//			request.getSession().setAttribute("Trans", trans);
+//			return "/TransactionHistoryE.html";
+//		} else {
+//			return "/html/TransactionHistoryE.html";
+//		}
+//	}
 
 }

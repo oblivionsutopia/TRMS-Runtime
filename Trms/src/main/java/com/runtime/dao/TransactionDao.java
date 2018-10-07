@@ -7,6 +7,6 @@ import com.runtime.bean.Transaction;
 
 
 public interface TransactionDao {
-	public List<Transaction> getTransList(int userId) throws SQLException;
+	public Transaction getTransList(int userId);
 
 }

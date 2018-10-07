@@ -21,15 +21,16 @@ public class RequestHelper {
 			System.out.println("in Register.do");
 			return RegisterController.Register(request);
 			
-		case "/Trms/html/TransactionHistoryE.do":
-			System.out.println("in TransactionHistoryE.do");
-			return TransactionController.getTrans(request);
-			
+//		case "/Trms/html/TransactionHistoryE.do":
+//			System.out.println("in TransactionHistoryE.do");
+//			return TransactionController.getTrans(request);
+//			
 
 		case "/Trms/html/UserJSON.do":
 			return ProfileController.UserJSON(request, response);
 			
-		case"/Trms/html/TransJSON":
+		case"/Trms/html/TransJSON.do":
+			//TransactionController.getTrans(request);
 			return TransactionController.TransJSON(request, response);
 
 		default:

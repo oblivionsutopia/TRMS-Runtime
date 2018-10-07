@@ -1,13 +1,13 @@
 window.onload = function() {
-	getUserInfo();
+	getTransInfo();
 }
 
 function getTransInfo() {
 	let xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {	
-			let account = JSON.parse(xhttp.responseText);
-			setValues(account);
+			let trans = JSON.parse(xhttp.responseText);
+			setValues(trans);
 		}
 	}
 
@@ -17,12 +17,12 @@ function getTransInfo() {
 
 }
 
-function setValues(user) {
-	document.getElementsById('row1')[0].placeholder= trans.userId;
-	document.getElementsById('row2')[0].placeholder= trans.transId;
-	document.getElementsById('row3')[0].placeholder= trans.amountReim;
-	document.getElementsById('row4')[0].placeholder= trans.remainingReim;
-	document.getElementsById('row5')[0].placeholder= trans.date;
+function setValues(trans) {
+	document.getElementsById('row1').innerHTML= trans.userId;
+	document.getElementsById('row2').innerHTML= trans.transId;
+	document.getElementsById('row3').innerHTML= trans.amountReim;
+	document.getElementsById('row4').innerHTML= trans.remainingReim;
+	document.getElementsById('row5').innerHTML= trans.date;
 	/*document.getElementById("Us").innerHTML = "The username is: "
 			+ user.userName;
 	document.getElementById("Pas").innerHTML = "The password is: "
