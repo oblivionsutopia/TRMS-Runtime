@@ -6,6 +6,17 @@
     float: right;
     background-color:green;
 }
+[type |="cancel"]{
+    float: left;
+    background-color:green;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
 body,html{
     height: 100%;
     color: rgb(255, 255, 255);
@@ -13,8 +24,6 @@ body,html{
 }
 form.Cityscape2{
     background: url('images/Cityscape2.jpg');
-    background-repeat: repeat; 
-    background-size: cover;
-    width: 100%; 
-    height: 100%;
+    background: cover;
+    background-size: 100%;
 } 

@@ -35,25 +35,25 @@
     <!--make it bold-->
     <form action="" class="container-fluid Cityscape2">
         <h1>Reimbursement Request Form</h1>
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-md-center">
+            <div class="col col-sm-3">
                 <div class="form-group">
                     <label for="firstname">Firstname</label>
                     <input type="text" name="firstname" id="firstname" class="form-control">
                 </div>
             </div>
-            <div class="col">
+            <div class="col col-sm-3">
                 <div class="form-group">
                     <label for="lastname">Lastname</label>
                     <input type="text" name="lastname" id="lastname" class="form-control">
-                    <small class="form-text text-muted">
+                    <!-- <small class="form-text text-muted">
                         This should be your last name.
-                    </small>
+                    </small> -->
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-md-center">
+            <div class="col col-sm-3">
                 <div class="form-group">
                     <label for="Employee ID">Employee ID</label>
                     <input type="text" name="EmployeeID" id="EmployeeID" class="form-control">
@@ -62,80 +62,102 @@
         </div>
         <h2>Training Information</h2>
         <!-- does the date need to be a range or is just one ok? -->
-        <div class="form-group">
-            <label for="Date">Date</label>
-            <input type="date" name="Date" id="Date" class="form-control" required>
-            <div class="invalid-feedback">Please enter a valid date.</div>
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <label for="Date">Date</label>
+                <input type="date" name="Date" id="Date" class="form-control" required>
+                <!-- <div class="invalid-feedback">Please enter a valid date.</div> -->
+            </div>
         </div>
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-md-center">
+            <div class="col col-sm-3">
                 <div class="form-group">
                     <label for="StartTime">Start Time</label>
                     <input type="time" name="StartTime" id="StartTime" class="form-control">
                 </div>
             </div>
-            <div class="col">
+            <div class="col col-sm-3">
                 <div class="form-group">
                     <label for="EndTime">End Time</label>
                     <input type="time" name="EndTime" id="EndTime" class="form-control">
                 </div>
             </div>
         </div>
+
         <!-- <div class="form-group">
             <label for="password">Password</label>
             <input type="password" name="password" id="password" class="form-control">
         </div> -->
-        <div class="form-group">
-            <label for="Location">Location</label>
-            <input type="text" name="Location" id="Location" class="form-control">
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <label for="Location">Location</label>
+                <input type="text" name="Location" id="Location" class="form-control">
+            </div>
         </div>
-        <div class="form-gruop">
-            <label for="Cost">Cost</label>
-            <input type="text" name="Cost" id="Cost" class="form-control">
+        <div class="row justify-content-md-center">
+            <div class="form-gruop col-sm-3">
+                <label for="Cost">Cost</label>
+                <input type="text" name="Cost" id="Cost" class="form-control">
+            </div>
         </div>
         <!-- types of grading formats -->
-        <div class="form-group">
-            <label for="GradingFormats">Grading Formats</label>
-            <select name="GradingFormats" id="GradingFormats" class="form-control">
-                <option value=""></option>
-            </select>
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <label for="GradingFormats">Grading Formats</label>
+                <select name="GradingFormats" id="GradingFormats" class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="TypeOfEvent">Type Of Event</label>
-            <select name="TypeOfEvent" id="TypeOfEvent" class="form-control">
-                <option value="Certification">Certification</option>
-                <option value="TechincalTraining">Techincal Training</option>
-                <option value="UniversityCourses">University Courses</option>
-                <option value="CertificationPreperationCourse">Certification Preperation Course</option>
-                <option value="Seminars">Seminars</option>
-                <option value="Other">Other</option>
-            </select>
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <label for="TypeOfEvent">Type Of Event</label>
+                <select name="TypeOfEvent" id="TypeOfEvent" class="form-control">
+                    <option value="Certification">Certification</option>
+                    <option value="TechincalTraining">Techincal Training</option>
+                    <option value="UniversityCourses">University Courses</option>
+                    <option value="CertificationPreperationCourse">Certification Preperation Course</option>
+                    <option value="Seminars">Seminars</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
         </div>
-        <div class="form-group">
-            <h6>Description</h6>
-            <textarea id="Description" rows="3" cols="80" class="form-control">Your Text Here</textarea>
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <h6>Description</h6>
+                <textarea id="Description" rows="3" cols="80" class="form-control">Your Text Here</textarea>
+            </div>
         </div>
-        <div class="form-group">
-            <h6>Work Related Justifications</h6>
-            <textarea id="Description" rows="3" cols="80" class="form-control">Your Text Here</textarea>
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <h6>Work Related Justifications</h6>
+                <textarea id="Description" rows="3" cols="80" class="form-control">Your Text Here</textarea>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="MinimumPassingGrade">Minimum Passing Grade</label>
-            <select name="MinimumPassingGrade" id="MinimumPassingGrade" class="MinimumPassingGrade">
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="Pass">Pass</option>
-            </select>
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <label for="MinimumPassingGrade">Minimum Passing Grade</label>
+                <select name="MinimumPassingGrade" id="MinimumPassingGrade" class="form-control">
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="Pass">Pass</option>
+                </select>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="MissedWorkTime">Missed Work Time</label>
-            <input name="MissedWorkTime" id="MissedWorkTime" class="form-control">
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <label for="MissedWorkTime">Missed Work Time</label>
+                <input name="MissedWorkTime" id="MissedWorkTime" class="form-control">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="ProjectedReimbursement">Projected Reimbursement</label>
-            <input name="ProjectedReimbursement" id="ProjectedReimbursement" class="form-control" readonly>
+        <div class="row justify-content-md-center">
+            <div class="form-group col-sm-3">
+                <label for="ProjectedReimbursement">Projected Reimbursement</label>
+                <input name="ProjectedReimbursement" id="ProjectedReimbursement" class="form-control" readonly>
+            </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="cancel" class="btn btn-primary">Cancel</button>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

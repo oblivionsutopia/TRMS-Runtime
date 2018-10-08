@@ -2,6 +2,12 @@
     float: right;
     background-color:green;
 }
+a:link{
+    color:white;
+}
+a:hover{
+    color:green;
+}
 body,html{
     height: 100%;
     color: rgb(255, 255, 255);

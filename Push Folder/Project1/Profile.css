@@ -12,6 +12,9 @@ nav{
     float: right;
     background-color:green;
 }
+h1{
+    text-align: center;
+}
 body,html{
     height: 100%;
     color: rgb(255, 255, 255);
